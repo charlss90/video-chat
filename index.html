@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Video Chat - Kratos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel='stylesheet' href='lib/bootstrap3.2/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='lib/bootstrap3.2/css/bootstrap-theme.min.css' />
+    <link rel='stylesheet' href='stylesheets/style.css' />
+
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Video Chat <small>- Kratos</small></a>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                
+                <div class="pull-left" id="">
+                 
+                  <form id="selectorRoom" class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="roomName" placeholder="Room">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button id="start-call" class="btn btn-primary">Start</button>
+
+                  </form>
+
+
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </div>
+                
+        
+
+    </div>
+   
+            
+
+    </nav>
+    <section class="container">
+        <section class="row-fluid">
+
+            <div class="col-md-6 panel panel-default">
+                <div class="panel-header">
+                    <h3>Tu</h3>
+                </div>
+                <div id="panelSelfVideo" class="panel-body">
+                    <video autoplay="autoplay" id="selfVideo" controls></video>
+                </div>
+            </div>
+
+            <!-- Second Panel for viewer -->
+            <div class="col-md-6 panel panel-primary">
+                <div class="panel-header">
+                    <div class="panel-header">
+                        <h3>Compañero</h3>
+                    </div>
+
+                    <div id="panelAnotherVideo" class="panel-body">
+                        <video id="anotherVideo" autoplay="autoplay" controls></video>
+                    </div>  
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+</html>
