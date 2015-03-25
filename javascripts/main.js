@@ -139,7 +139,6 @@ var main = function () {
             });
         }
 
-        console.log("shit 1!");
 
         navigator.getMedia(
             {
@@ -152,7 +151,6 @@ var main = function () {
             },
             onFailSoHard
         );
-        console.log("shit 2!");
     }
 
 
